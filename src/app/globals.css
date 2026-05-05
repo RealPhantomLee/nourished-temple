@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-nt-green-50: #f0fdf4;
+  --color-nt-green-100: #dcfce7;
+  --color-nt-green-200: #bbf7d0;
+  --color-nt-green-300: #86efac;
+  --color-nt-green-400: #4ade80;
+  --color-nt-green-500: #22c55e;
+  --color-nt-green-600: #16a34a;
+  --color-nt-green-700: #15803d;
+  --color-nt-green-800: #166534;
+  --color-nt-green-900: #14532d;
+  --color-nt-green-950: #052e16;
+
+  --color-nt-earth-50: #faf8f5;
+  --color-nt-earth-100: #f5f0e8;
+  --color-nt-earth-200: #e8dcc8;
+  --color-nt-earth-300: #d4c4a8;
+  --color-nt-earth-400: #bfa882;
+  --color-nt-earth-500: #a68b5b;
+  --color-nt-earth-600: #8b7345;
+  --color-nt-earth-700: #6b5a37;
+  --color-nt-earth-800: #4a3e2a;
+  --color-nt-earth-900: #2d2619;
+
+  --color-nt-gold: #d4a853;
+  --color-nt-gold-light: #f0d48a;
+  --color-nt-gold-dark: #b8892e;
+
+  --color-nt-cream: #fdf8f0;
+  --color-nt-sage: #8fbc8f;
+  --color-nt-forest: #2d5016;
+
+  --font-sans: 'var(--font-geist-sans)';
+  --font-mono: 'var(--font-geist-mono)';
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
