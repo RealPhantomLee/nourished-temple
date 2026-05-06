@@ -1,12 +1,23 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Playfair_Display, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { Providers } from '@/components/Providers'
+import { WellnessTipBanner } from '@/components/sections/WellnessTipBanner'
+import { NatureBackground } from '@/components/ui/NatureBackground'
+import { CartProvider } from '@/lib/cart/context'
+import { CustomCursor } from '@/components/ui/CustomCursor'
+import { NoiseOverlay } from '@/components/ui/NoiseOverlay'
+import { EasterEgg } from '@/components/ui/EasterEgg'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  variable: '--font-sans',
+  subsets: ['latin'],
+})
+
+const playfair = Playfair_Display({
+  variable: '--font-serif',
   subsets: ['latin'],
 })
 
@@ -28,13 +39,22 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased bg-nt-cream text-nt-earth-900">
-        <Providers>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </Providers>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen flex flex-col antialiased bg-nt-cream text-nt-earth-900 relative overflow-x-hidden">
+        <NatureBackground />
+        <NoiseOverlay />
+        <CustomCursor />
+        <EasterEgg />
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <CartProvider>
+            <Providers>
+              <WellnessTipBanner />
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </Providers>
+          </CartProvider>
+        </div>
       </body>
     </html>
   )

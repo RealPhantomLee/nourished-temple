@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { getEventBySlug, events } from '@/lib/events'
+import { fetchEventBySlug, fetchEvents } from '@/lib/sanity'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, MapPin, Clock } from 'lucide-react'
 
@@ -9,12 +9,13 @@ type Props = {
 }
 
 export async function generateStaticParams() {
+  const events = await fetchEvents()
   return events.map((e) => ({ slug: e.slug }))
 }
 
 export default async function EventDetailPage({ params }: Props) {
   const { slug } = await params
-  const event = getEventBySlug(slug)
+  const event = await fetchEventBySlug(slug)
 
   if (!event) {
     notFound()
@@ -26,13 +27,13 @@ export default async function EventDetailPage({ params }: Props) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/events"
-            className="inline-flex items-center gap-2 text-nt-green-700 font-medium hover:text-nt-green-800 transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-nt-green-700 font-medium hover:text-nt-green-800 transition-colors mb-8 group"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Events
           </Link>
 
-          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-nt-earth-100 mb-8">
+          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-nt-earth-100 shadow-xl mb-8">
             <Image
               src={event.image}
               alt={event.title}
@@ -45,8 +46,10 @@ export default async function EventDetailPage({ params }: Props) {
           <h1 className="text-3xl lg:text-4xl font-bold text-nt-earth-900">{event.title}</h1>
 
           <div className="mt-6 grid sm:grid-cols-3 gap-4">
-            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg">
-              <Calendar className="w-5 h-5 text-nt-green-700 shrink-0" />
+            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg hover:bg-nt-earth-100 transition-colors">
+              <div className="w-10 h-10 bg-nt-green-100 rounded-lg flex items-center justify-center">
+                <Calendar className="w-5 h-5 text-nt-green-700" />
+              </div>
               <div>
                 <p className="text-xs text-nt-earth-500 uppercase">Date</p>
                 <p className="font-medium">
@@ -58,15 +61,19 @@ export default async function EventDetailPage({ params }: Props) {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg">
-              <Clock className="w-5 h-5 text-nt-green-700 shrink-0" />
+            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg hover:bg-nt-earth-100 transition-colors">
+              <div className="w-10 h-10 bg-nt-green-100 rounded-lg flex items-center justify-center">
+                <Clock className="w-5 h-5 text-nt-green-700" />
+              </div>
               <div>
                 <p className="text-xs text-nt-earth-500 uppercase">Time</p>
                 <p className="font-medium">{event.time}</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg">
-              <MapPin className="w-5 h-5 text-nt-green-700 shrink-0" />
+            <div className="flex items-center gap-3 p-4 bg-nt-earth-50 rounded-lg hover:bg-nt-earth-100 transition-colors">
+              <div className="w-10 h-10 bg-nt-green-100 rounded-lg flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-nt-green-700" />
+              </div>
               <div>
                 <p className="text-xs text-nt-earth-500 uppercase">Location</p>
                 <p className="font-medium">{event.location}</p>
