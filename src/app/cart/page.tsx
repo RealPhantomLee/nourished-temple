@@ -11,10 +11,12 @@ export default function CartPage() {
   const { items, removeItem, updateQuantity, total, clearCart } = useCart()
   const [referralCode, setReferralCode] = useState('')
   const [checkoutLoading, setCheckoutLoading] = useState(false)
+  const [checkoutError, setCheckoutError] = useState('')
   const router = useRouter()
 
   const handleCheckout = async () => {
     setCheckoutLoading(true)
+    setCheckoutError('')
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -34,10 +36,10 @@ export default function CartPage() {
       if (data.url) {
         window.location.href = data.url
       } else {
-        alert('Could not start checkout. Please try again.')
+        setCheckoutError('Could not start checkout. Please try again.')
       }
     } catch {
-      alert('Something went wrong. Please try again.')
+      setCheckoutError('Something went wrong. Please try again.')
     }
     setCheckoutLoading(false)
   }
@@ -158,6 +160,12 @@ export default function CartPage() {
                     className="w-full px-3 py-2 border border-nt-earth-200 rounded-lg text-sm focus:ring-2 focus:ring-nt-green-500 focus:border-transparent outline-none bg-white/50"
                   />
                 </div>
+
+                {checkoutError && (
+                  <p className="mt-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+                    {checkoutError}
+                  </p>
+                )}
 
                 <button
                   onClick={handleCheckout}

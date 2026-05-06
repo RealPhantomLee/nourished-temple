@@ -92,11 +92,12 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget)
     const data = Object.fromEntries(formData.entries())
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
+      if (!res.ok) throw new Error('Server error')
       setSubmitted(true)
     } catch {
       alert('Something went wrong. Please try again.')

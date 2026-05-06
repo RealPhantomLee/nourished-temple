@@ -46,28 +46,38 @@ html {
 
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.0625rem; /* 17px — improves readability on all screens */
+  line-height: 1.75;
   cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure all text has contrast against any background */
-main section,
-main header {
-  background: rgba(253, 248, 240, 0.85);
-  backdrop-filter: blur(8px);
+/* Restore native cursor on touch devices — custom leaf cursor is pointer-only */
+@media (pointer: coarse) {
+  body, a, button, [role="button"], input, select, textarea {
+    cursor: auto;
+  }
 }
 
+/* Light content sections — cream background with stronger opacity for readability */
+main section,
+main header {
+  background: rgba(253, 248, 240, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+/* Hero / full-bleed sections sit directly over the forest */
 main section:first-of-type {
   background: transparent;
   backdrop-filter: none;
 }
 
-/* Dark sections need light text */
+/* Dark overlay sections have their own backgrounds inline; ensure text contrast */
 section:has(.text-white),
 section:has([class*="text-white"]) {
-  background: rgba(5, 46, 22, 0.9);
-  backdrop-filter: blur(8px);
+  background: rgba(5, 46, 22, 0.88);
+  backdrop-filter: blur(10px);
 }
 
 a, button, [role="button"], input, select, textarea {

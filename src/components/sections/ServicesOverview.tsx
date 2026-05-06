@@ -45,7 +45,7 @@ const services = [
     icon: Users,
     title: 'Community',
     description: 'Join our community for online access to cooking demos, recipes, freebies, and alkalinity resources.',
-    link: '/dashboard',
+    link: '/dashboard/signup',
     accent: 'from-nt-gold-light to-nt-gold',
   },
 ]

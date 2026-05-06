@@ -53,7 +53,7 @@ const services = [
     subtitle: 'Help Me, Help You, Help Others',
     description: 'Save, earn, and grow together. Access free shipping, earn income through referrals, and support a movement of alkaline wellness.',
     cta: 'Join Community',
-    link: '/dashboard',
+    link: '/dashboard/signup',
     highlight: 'Earn $5 per referral',
   },
 ]
