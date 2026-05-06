@@ -18,9 +18,9 @@ export function NatureBackground() {
   const maxScroll = typeof window !== 'undefined' ? 4000 : 4000
   const scrollProgress = Math.min(scrollY / maxScroll, 1)
 
-  const treeScale = 1 + scrollProgress * 1.5
-  const treeOpacityMultiplier = 1 + scrollProgress * 1.2
-  const treeGrowthDuration = 1200
+  const treeScale = 1 + scrollProgress * 2.2
+  const treeOpacityMultiplier = 1 + scrollProgress * 2.0
+  const treeGrowthDuration = 900
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
@@ -47,7 +47,7 @@ export function NatureBackground() {
               left: `${(i * 7.5) % 95}%`,
               width: `${80 + (i % 4) * 35}px`,
               height: `${180 + (i % 5) * 50}px`,
-              opacity: (0.04 + scrollProgress * 0.08) * treeOpacityMultiplier,
+              opacity: (0.10 + scrollProgress * 0.18) * treeOpacityMultiplier,
               animationDuration: `${16 + i * 1.5}s`,
               animationDelay: `${i * 0.6}s`,
             }}
@@ -93,7 +93,7 @@ export function NatureBackground() {
               left: `${(i * 11 + 3) % 92}%`,
               width: `${110 + (i % 3) * 40}px`,
               height: `${220 + (i % 4) * 55}px`,
-              opacity: (0.05 + scrollProgress * 0.09) * treeOpacityMultiplier,
+              opacity: (0.13 + scrollProgress * 0.22) * treeOpacityMultiplier,
               animationDuration: `${18 + i * 1.8}s`,
               animationDelay: `${i * 0.9}s`,
             }}
@@ -138,7 +138,7 @@ export function NatureBackground() {
               left: `${(i * 10.5 + 2) % 90}%`,
               width: `${130 + (i % 4) * 45}px`,
               height: `${260 + (i % 4) * 70}px`,
-              opacity: (0.06 + scrollProgress * 0.12) * treeOpacityMultiplier,
+              opacity: (0.16 + scrollProgress * 0.28) * treeOpacityMultiplier,
               animationDuration: `${20 + i * 2}s`,
               animationDelay: `${i * 1}s`,
             }}
@@ -175,7 +175,7 @@ export function NatureBackground() {
               left: `${(i * 15 + 5) % 88}%`,
               width: `${160 + (i % 3) * 50}px`,
               height: `${300 + (i % 3) * 60}px`,
-              opacity: (0.07 + scrollProgress * 0.14) * treeOpacityMultiplier,
+              opacity: (0.20 + scrollProgress * 0.35) * treeOpacityMultiplier,
               animationDuration: `${22 + i * 2.5}s`,
               animationDelay: `${i * 1.3}s`,
             }}

@@ -33,12 +33,12 @@ export default function ShopPage() {
       <div>
         <section className="relative py-24 lg:py-32 overflow-hidden">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center justify-center gap-2 text-nt-green-700 mb-4">
+            <div className="flex items-center justify-center gap-2 text-nt-green-300 mb-4">
               <Sprout className="w-6 h-6" />
               <span className="text-sm font-medium uppercase tracking-wider">Alkaline Kreationz</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-nt-earth-900">Shop</h1>
-            <p className="mt-4 text-lg text-nt-earth-700 max-w-2xl mx-auto">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white">Shop</h1>
+            <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
               Loading our handcrafted products...
             </p>
           </div>
@@ -51,12 +51,12 @@ export default function ShopPage() {
     <div>
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 text-nt-green-700 mb-4">
+          <div className="flex items-center justify-center gap-2 text-nt-green-300 mb-4">
             <Sprout className="w-6 h-6" />
             <span className="text-sm font-medium uppercase tracking-wider">Alkaline Kreationz</span>
           </div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-nt-earth-900">Shop</h1>
-          <p className="mt-4 text-lg text-nt-earth-700 max-w-2xl mx-auto">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white">Shop</h1>
+          <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
             Handcrafted wild-crafted and organic herbal compounds, alkaline meals, and wellness essentials.
           </p>
         </div>

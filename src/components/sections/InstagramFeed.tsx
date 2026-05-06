@@ -33,12 +33,12 @@ export function InstagramFeed() {
     <section className="py-16 lg:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 text-nt-green-700 mb-4">
+          <div className="inline-flex items-center gap-2 text-nt-green-300 mb-4">
             <Camera className="w-6 h-6" />
             <span className="text-sm font-medium uppercase tracking-wider">@alkalineexcellence</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-nt-earth-900">Follow Our Journey</h2>
-          <p className="mt-4 text-lg text-nt-earth-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">Follow Our Journey</h2>
+          <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
             Join us on Instagram for daily alkaline inspiration, recipes, and temple wellness tips.
           </p>
         </div>
@@ -70,7 +70,7 @@ export function InstagramFeed() {
             href="https://instagram.com/alkalineexcellence"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-nt-green-700 font-medium hover:text-nt-green-800 transition-colors"
+            className="inline-flex items-center gap-2 text-nt-green-300 font-medium hover:text-white transition-colors"
           >
             Follow us on Instagram
             <span>&rarr;</span>

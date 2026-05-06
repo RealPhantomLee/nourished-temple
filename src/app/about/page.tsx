@@ -58,12 +58,12 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center bg-white/75 backdrop-blur-md rounded-2xl px-8 py-10 shadow-sm">
               <h2 className="text-2xl lg:text-3xl font-serif font-bold text-nt-earth-900 mb-6">Who We Are</h2>
-              <p className="text-lg text-nt-earth-700 leading-relaxed">
+              <p className="text-lg text-nt-earth-800 leading-[1.85]">
                 Located in Los Angeles, California, Nourished Temple attributes a good reputation through honest customer relationships. We are a well-rounded health and wellness business empowered by integrity, love, peace, and original laws of life.
               </p>
-              <p className="mt-4 text-lg text-nt-earth-700 leading-relaxed">
+              <p className="mt-4 text-lg text-nt-earth-800 leading-[1.85]">
                 Nourished Temple specializes in healing of the temple through Alkalinity. We heal with an Alkaline electric Bio-mineral Balanced based approach, Nourishment for Mind, Body, and Soul. When we eat right, we think right, feel right & do right.
               </p>
             </div>
@@ -78,20 +78,20 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal direction="left">
-              <div>
+              <div className="bg-white/75 backdrop-blur-md rounded-2xl p-8 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-nt-green-100 rounded-lg flex items-center justify-center">
                     <Heart className="w-5 h-5 text-nt-green-700" />
                   </div>
                   <h2 className="text-2xl lg:text-3xl font-serif font-bold text-nt-earth-900">Our Mission</h2>
                 </div>
-                <p className="text-lg text-nt-earth-700 leading-relaxed">
+                <p className="text-lg text-nt-earth-800 leading-[1.85]">
                   Nourished Temple is rooted in the Alkaline Electric Bio-Mineral Balanced Lifestyle, dedicated to nourishing, uplifting, and educating individuals on a mental, physical, and spiritual level.
                 </p>
-                <p className="mt-4 text-lg text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-lg text-nt-earth-800 leading-[1.85]">
                   Our mission is guided by universal truths and the natural laws of living. We honor and incorporate sacred, indigenous plant medicines sourced from powerful regions such as the Amazon, Mexico, Honduras, Peru, and Africa — each chosen for its deep ancestral wisdom and potent healing properties.
                 </p>
-                <p className="mt-4 text-lg text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-lg text-nt-earth-800 leading-[1.85]">
                   Through these plant-based modalities and an intentional, electric approach to nourishment — whether alkaline, raw, vegetarian, fruitarian, or even for those transitioning from a carnivorous lifestyle — we aim to support true cellular regeneration and holistic well-being.
                 </p>
               </div>
@@ -151,17 +151,17 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
-              <div>
+              <div className="bg-white/75 backdrop-blur-md rounded-2xl p-8 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-nt-gold/20 rounded-lg flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-nt-gold-dark" />
                   </div>
                   <h2 className="text-2xl lg:text-3xl font-serif font-bold text-nt-earth-900">Our Vision</h2>
                 </div>
-                <p className="text-lg text-nt-earth-700 leading-relaxed">
+                <p className="text-lg text-nt-earth-800 leading-[1.85]">
                   To create a renewed and thriving world, we must first begin within by healing at the cellular level. True transformation extends beyond clean eating and sacred plant medicine. It requires patience, education, self-love, self-awareness, and an unwavering commitment to truth.
                 </p>
-                <p className="mt-4 text-lg text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-lg text-nt-earth-800 leading-[1.85]">
                   A peaceful, healthy, and elevated world begins with each of us. At Nourished Temple, we envision a powerful movement of spiritually aligned, self-sustained, and consciously educated individuals living in balance and continuously evolving into their highest selves.
                 </p>
               </div>
@@ -177,8 +177,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl lg:text-3xl font-serif font-bold text-nt-earth-900 mb-4">Mel's Journey</h2>
-              <p className="text-lg text-nt-earth-600 max-w-2xl mx-auto">From medical professional to alkaline healer.</p>
+              <h2 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-4">Mel&apos;s Journey</h2>
+              <p className="text-lg text-nt-green-200 max-w-2xl mx-auto">From medical professional to alkaline healer.</p>
             </div>
           </ScrollReveal>
 
@@ -224,22 +224,22 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal direction="left">
-              <div>
+              <div className="bg-white/75 backdrop-blur-md rounded-2xl p-8 lg:p-10 shadow-sm">
                 <h2 className="text-2xl lg:text-3xl font-serif font-bold text-nt-earth-900 mb-6">About the Owner</h2>
-                <p className="text-lg text-nt-earth-700 leading-relaxed font-medium">Peace Nourished Family!</p>
-                <p className="mt-4 text-nt-earth-700 leading-relaxed">
+                <p className="text-lg text-nt-earth-800 leading-[1.85] font-medium">Peace Nourished Family!</p>
+                <p className="mt-4 text-nt-earth-800 leading-[1.85]">
                   Welcome, I appreciate you taking the time out of your day to visit my site today. With a well-rounded medical background in the medical field since October 2009, now nursing in various Hospitals around Southern California, I have quality knowledge on how the body works along with African-based medical teachings.
                 </p>
-                <p className="mt-4 text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-nt-earth-800 leading-[1.85]">
                   Like many back along my journey I suffered complications through my temple, eating the wrong detrimental foods like dairy, meat & starch. I had candida, severe cramps, excess mucus, headaches, low energy, I was overweight, and delusional. It got so bad I was in need of a new kidney.
                 </p>
-                <p className="mt-4 text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-nt-earth-800 leading-[1.85]">
                   I tried many diets — nothing worked, not even vegan. Once this kidney issue happened twice I decided to dedicate time to researching something different. Gratefully I was introduced to Dr. Sebi Cell Food and Alkaline Foods by Rastas back in 2009.
                 </p>
-                <p className="mt-4 text-nt-earth-700 leading-relaxed">
+                <p className="mt-4 text-nt-earth-800 leading-[1.85]">
                   I then converted my Western herbal-based teachings to what now made sense — Indigenous Plant Medicine & living an Alkaline Electric Cell Food Plant-based Lifestyle. Taking my health back into my own hands, understanding herbs and how they work for our temples.
                 </p>
-                <p className="mt-4 text-nt-earth-700 leading-relaxed font-medium">
+                <p className="mt-4 text-nt-earth-800 leading-[1.85] font-medium">
                   Love, Truth & Peace — Mel
                 </p>
               </div>

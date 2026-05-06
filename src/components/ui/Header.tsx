@@ -10,9 +10,10 @@ import { CartDrawer } from '@/components/ui/CartDrawer'
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
-  { label: 'About', href: '/about' },
+  { label: 'Herbs', href: '/herbs' },
   { label: 'Services', href: '/services' },
   { label: 'Events', href: '/events' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 

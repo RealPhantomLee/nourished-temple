@@ -60,24 +60,12 @@ body {
   }
 }
 
-/* Light content sections — cream background with stronger opacity for readability */
+/* Sections are transparent — the forest is the background.
+   Content readability comes from glass-morphism panels inside each section,
+   not from section-level overlays. */
 main section,
 main header {
-  background: rgba(253, 248, 240, 0.92);
-  backdrop-filter: blur(12px);
-}
-
-/* Hero / full-bleed sections sit directly over the forest */
-main section:first-of-type {
   background: transparent;
-  backdrop-filter: none;
-}
-
-/* Dark overlay sections have their own backgrounds inline; ensure text contrast */
-section:has(.text-white),
-section:has([class*="text-white"]) {
-  background: rgba(5, 46, 22, 0.88);
-  backdrop-filter: blur(10px);
 }
 
 a, button, [role="button"], input, select, textarea {

@@ -56,8 +56,8 @@ export function ServicesOverview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-nt-earth-900">Our Services</h2>
-            <p className="mt-4 text-lg text-nt-earth-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-white">Our Services</h2>
+            <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
               Nourishment for mind, body, and soul — through alkalinity, herbs, and holistic wellness.
             </p>
           </div>

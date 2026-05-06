@@ -14,12 +14,12 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-2 text-nt-green-700 mb-4">
+            <div className="flex items-center justify-center gap-2 text-nt-green-300 mb-4">
               <Sprout className="w-5 h-5" />
               <span className="text-sm font-medium uppercase tracking-wider">Handcrafted with Care</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-nt-earth-900">Featured Products</h2>
-            <p className="mt-4 text-lg text-nt-earth-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-white">Featured Products</h2>
+            <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
               Handcrafted wild-crafted and organic herbal compounds, alkaline meals, and more.
             </p>
           </div>
@@ -35,7 +35,7 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
           <div className="mt-12 text-center">
             <Link
               href="/shop"
-              className="group inline-flex items-center gap-2 text-nt-green-700 font-medium hover:text-nt-green-800 transition-colors"
+              className="group inline-flex items-center gap-2 text-nt-green-300 font-medium hover:text-white transition-colors"
             >
               View All Products
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
