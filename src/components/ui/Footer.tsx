@@ -95,9 +95,6 @@ export function Footer() {
             <span>·</span>
             <Link href="/terms" className="hover:text-nt-green-200 transition-colors">Terms of Service</Link>
           </div>
-          <p className="text-xs text-nt-green-500 mt-3 max-w-2xl mx-auto leading-relaxed">
-            These statements have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure, or prevent any disease.
-          </p>
         </div>
       </div>
     </footer>

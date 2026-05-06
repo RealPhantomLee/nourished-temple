@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { ProductCard } from '@/components/ui/ProductCard'
-import { FDADisclaimer } from '@/components/ui/FDADisclaimer'
 import { Sprout } from 'lucide-react'
 import { Product } from '@/types'
 
@@ -110,9 +109,6 @@ export default function ShopPage() {
             </div>
           )}
 
-          <div className="mt-12 max-w-2xl mx-auto">
-            <FDADisclaimer />
-          </div>
         </div>
       </section>
     </div>

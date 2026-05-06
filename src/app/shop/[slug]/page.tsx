@@ -7,7 +7,6 @@ import { fetchProductBySlug } from '@/lib/sanity'
 import Link from 'next/link'
 import { ArrowLeft, ShoppingCart, Leaf, ShieldCheck, Truck, Check, Minus, Plus } from 'lucide-react'
 import { useCart } from '@/lib/cart/context'
-import { FDADisclaimer } from '@/components/ui/FDADisclaimer'
 import { Product } from '@/types'
 
 type Props = {
@@ -160,10 +159,6 @@ export default function ProductPage({ params }: Props) {
                     </>
                   )}
                 </button>
-
-                <div className="mt-6">
-                  <FDADisclaimer />
-                </div>
               </div>
             </div>
           </div>
