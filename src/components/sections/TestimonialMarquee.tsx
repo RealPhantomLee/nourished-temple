@@ -39,7 +39,7 @@ export function TestimonialMarquee() {
       <div className="absolute inset-0 bg-gradient-to-r from-nt-green-950 via-transparent to-nt-green-950 z-10 pointer-events-none" />
       <div className="animate-marquee flex">
         {doubled.map((t, i) => (
-          <div key={i} className="inline-flex items-start gap-4 mx-10 shrink-0 max-w-sm">
+          <div key={i} className="inline-flex items-start gap-4 mx-10 shrink-0">
             <span className="text-nt-gold text-xl mt-1 shrink-0">✦</span>
             <div>
               <p className="text-white/90 text-base font-serif italic leading-snug whitespace-nowrap">
