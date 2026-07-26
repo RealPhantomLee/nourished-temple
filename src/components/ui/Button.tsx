@@ -12,7 +12,7 @@ const variants = {
 }
 
 export function Button({ variant = 'primary', as = 'button', href, className = '', children, ...props }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors text-sm'
+  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors text-sm uppercase tracking-[0.15em]'
   const classes = `${baseClasses} ${variants[variant]} ${className}`
 
   if (as === 'a' && href) {

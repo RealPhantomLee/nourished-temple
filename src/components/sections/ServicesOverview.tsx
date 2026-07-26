@@ -52,10 +52,10 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="py-16 lg:py-24 relative">
+    <section className="py-20 lg:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-white">Our Services</h2>
             <p className="mt-4 text-lg text-nt-green-200 max-w-2xl mx-auto">
               Nourishment for mind, body, and soul — through alkalinity, herbs, and holistic wellness.

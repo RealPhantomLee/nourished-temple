@@ -5,11 +5,11 @@ const values = ['Love', 'Truth', 'Integrity', 'Peace', 'Health', 'Prosperity', '
 
 export function MissionSection() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-24 lg:py-40 relative overflow-hidden">
       <div className="absolute inset-0 bg-nt-green-950/45 backdrop-blur-sm" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-start">
 
           {/* Left — Mission copy */}
           <div>

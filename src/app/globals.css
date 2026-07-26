@@ -48,16 +48,8 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.0625rem; /* 17px — improves readability on all screens */
   line-height: 1.75;
-  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Restore native cursor on touch devices — custom leaf cursor is pointer-only */
-@media (pointer: coarse) {
-  body, a, button, [role="button"], input, select, textarea {
-    cursor: auto;
-  }
 }
 
 /* Sections are transparent — the forest is the background.
@@ -68,48 +60,22 @@ main header {
   background: transparent;
 }
 
-a, button, [role="button"], input, select, textarea {
-  cursor: none;
-}
-
-/* === Custom Cursor === */
-.cursor-leaf-main {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  width: 24px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  transition: width 0.25s ease, height 0.25s ease, filter 0.25s ease;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-}
-
-.cursor-leaf-main.hovering {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 2px 8px rgba(212,168,83,0.5));
-}
-
-.cursor-leaf-trail {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9998;
-  width: 16px;
-  height: 16px;
-  transform: translate(-50%, -50%);
-  opacity: 0.35;
-  filter: blur(1px);
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
-}
-
-.cursor-leaf-trail.hovering {
-  width: 22px;
-  height: 22px;
-  opacity: 0.5;
+/* Ambient background motion (mist, sway, pollen, fireflies, shimmer) is decorative —
+   honor reduced-motion preference by freezing it entirely. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-sway-tree,
+  .animate-float-pollen,
+  .animate-leaf-fall,
+  .animate-mist-slow,
+  .animate-mist-slower,
+  .animate-breathe-slow,
+  .animate-dapple-light,
+  .animate-firefly,
+  .animate-text-shimmer,
+  .animate-marquee,
+  .animate-float {
+    animation: none !important;
+  }
 }
 
 /* === Noise Overlay === */
@@ -412,21 +378,6 @@ a, button, [role="button"], input, select, textarea {
   opacity: 0;
 }
 
-/* === Easter Egg Forest === */
-.easter-egg-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(21, 128, 61, 0.15) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.easter-egg-overlay.active {
-  opacity: 1;
-}
-
 /* === 3D Card Tilt === */
 .tilt-card {
   transform-style: preserve-3d;
@@ -480,20 +431,6 @@ a, button, [role="button"], input, select, textarea {
 
 .card-flip-back {
   transform: rotateY(180deg);
-}
-
-/* === Easter Egg Trees === */
-.easter-egg-tree {
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 1.5s ease, transform 2s ease;
-  transform: translateY(50px);
-}
-
-.easter-egg-overlay.active .easter-egg-tree {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* === Loading Spinner === */

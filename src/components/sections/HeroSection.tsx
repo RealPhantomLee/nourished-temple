@@ -17,7 +17,8 @@ export function HeroSection() {
     const t3 = setTimeout(() => setCtaVisible(true), 1300)
     const t4 = setTimeout(() => setQuoteVisible(true), 1700)
 
-    const newParticles = Array.from({ length: 18 }, (_, i) => ({
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const newParticles = Array.from({ length: reduceMotion ? 0 : 8 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -78,8 +79,8 @@ export function HeroSection() {
             }`}
             style={{ transitionDelay: '150ms' }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-[1.05] tracking-tight text-white">
-              <span className="animate-text-shimmer">Alkaline Electric</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-serif font-normal leading-[1.05] tracking-tight text-white">
+              <span className="italic text-nt-gold">Alkaline Electric</span>
               <span className="block mt-2 text-white">Cell Food</span>
               <span className="block text-2xl sm:text-3xl lg:text-4xl font-light mt-3 text-nt-green-200 tracking-wide">
                 Kreationz

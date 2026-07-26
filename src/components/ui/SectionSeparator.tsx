@@ -1,9 +1,21 @@
 interface SectionSeparatorProps {
-  variant?: 'wave' | 'vine' | 'leaf'
+  variant?: 'wave' | 'vine' | 'leaf' | 'eyebrow'
   flip?: boolean
+  label?: string
 }
 
-export function SectionSeparator({ variant = 'wave', flip = false }: SectionSeparatorProps) {
+export function SectionSeparator({ variant = 'wave', flip = false, label }: SectionSeparatorProps) {
+  if (variant === 'eyebrow') {
+    return (
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-8 h-px bg-nt-terracotta" />
+        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-nt-earth-600">
+          {label}
+        </span>
+      </div>
+    )
+  }
+
   if (variant === 'wave') {
     return (
       <div className={`section-divider ${flip ? 'rotate-180' : ''}`}>

@@ -7,9 +7,7 @@ import { Providers } from '@/components/Providers'
 import { WellnessTipBanner } from '@/components/sections/WellnessTipBanner'
 import { NatureBackground } from '@/components/ui/NatureBackground'
 import { CartProvider } from '@/lib/cart/context'
-import { CustomCursor } from '@/components/ui/CustomCursor'
 import { NoiseOverlay } from '@/components/ui/NoiseOverlay'
-import { EasterEgg } from '@/components/ui/EasterEgg'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -43,8 +41,6 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col antialiased bg-nt-cream text-nt-earth-900 relative overflow-x-hidden">
         <NatureBackground />
         <NoiseOverlay />
-        <CustomCursor />
-        <EasterEgg />
         <div className="relative z-10 flex flex-col min-h-screen">
           <CartProvider>
             <Providers>
